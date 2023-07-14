@@ -1,8 +1,9 @@
 import styles from './book.module.scss';
+import leather from '../assets/leather.jpeg';
 import Cover from './Cover';
 import BackCover from './BackCover';
 import Page from './Page';
-import leather from '../assets/leather.jpeg';
+
 import { useState } from 'react';
 
 export default function Book() {
@@ -40,7 +41,9 @@ export default function Book() {
 					setPageState={setPageState}
 				/>
 				<Page pageNum={'page2'} />
-				<BackCover />
+				<BackCover
+					style={{ background: `url(${leather}) right top` }}
+				/>
 			</div>
 		</>
 	);
