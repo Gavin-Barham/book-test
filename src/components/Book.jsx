@@ -7,25 +7,38 @@ import Page from './Page';
 import { useState } from 'react';
 
 export default function Book() {
-	const [bookState, setBookState] = useState('closed');
-	const [pageState, setPageState] = useState('closed');
+	const [bookState, setBookState] = useState('neutral');
+	const [pageState, setPageState] = useState('neutral');
 
 	let handleStateMachine = () => {
 		setBookState((prev) => {
-			if (prev === 'closed') {
+			if (prev === 'closed' || prev === 'neutral') {
 				return 'open';
 			} else {
 				return 'closed';
 			}
 		});
 		setPageState((prev) => {
-			if (prev === 'closed' && bookState === 'closed') {
+			if (
+				(prev === 'neutral' && bookState === 'neutral') ||
+				(prev === 'closed' && bookState === 'closed')
+			) {
 				return 'open';
 			} else {
 				return 'closed';
 			}
 		});
 	};
+	const handlePageState = () => {
+		setPageState((prev) => {
+			if (prev === 'closed') {
+				return 'open';
+			} else {
+				return 'closed';
+			}
+		});
+	};
+
 	return (
 		<>
 			<div className={styles.book} data-book={bookState}>
@@ -38,7 +51,7 @@ export default function Book() {
 				<Page
 					pageNum={'page1'}
 					pageState={pageState}
-					setPageState={setPageState}
+					handlePageState={handlePageState}
 				/>
 				<Page pageNum={'page2'} />
 				<BackCover
