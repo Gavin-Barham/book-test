@@ -1,4 +1,4 @@
-import styles from './book.module.scss';
+import styles from './SCSS/cover.module.scss';
 
 export default function BackCover(props) {
 	const { style } = props;

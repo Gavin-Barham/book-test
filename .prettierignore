@@ -1,1 +1,6 @@
-*.scss
+.gitignore
+.gitattributes
+*.html
+node_modules
+*.config*
+package*.json

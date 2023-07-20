@@ -1,0 +1,16 @@
+.book {
+	width: 30rem;
+	height: 45rem;
+	position: relative;
+	transition-duration: 0.7s;
+	perspective: 1500;
+}
+
+[data-book='open'] {
+	transform: translateX(280px);
+	transition: transform 0.7s ease-in-out both;
+}
+[data-book='closed'] {
+	transform: none;
+	transition: transform 0.7s ease-in-out both;
+}

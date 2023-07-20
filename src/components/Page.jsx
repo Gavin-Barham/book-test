@@ -1,4 +1,4 @@
-import styles from './book.module.scss';
+import styles from './SCSS/page.module.scss';
 
 export default function Page(props) {
 	const { pageNum, pageState, handlePageState } = props;
@@ -6,13 +6,28 @@ export default function Page(props) {
 		<div
 			className={`${styles.page} ${styles[pageNum]}`}
 			data-page={pageState}
-			onClick={handlePageState}
 		>
 			<div className={styles.front}>
-				<p>hello</p>
+				<div
+					className={`${styles.page_corner} ${styles.front_corner_top}`}
+					onClick={handlePageState}
+				></div>
+				<div
+					className={`${styles.page_corner} ${styles.front_corner_bottom}`}
+					onClick={handlePageState}
+				></div>
+				<p>front</p>
 			</div>
 			<div className={styles.back}>
-				<p>hello</p>
+				<div
+					className={`${styles.page_corner} ${styles.back_corner_top}`}
+					onClick={handlePageState}
+				></div>
+				<div
+					className={`${styles.page_corner} ${styles.back_corner_bottom}`}
+					onClick={handlePageState}
+				></div>
+				<p>back</p>
 			</div>
 		</div>
 	);

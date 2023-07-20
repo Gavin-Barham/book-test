@@ -1,4 +1,4 @@
-import styles from './book.module.scss';
+import styles from './SCSS/book.module.scss';
 import leather from '../assets/leather.jpeg';
 import Cover from './Cover';
 import BackCover from './BackCover';
