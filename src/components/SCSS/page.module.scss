@@ -12,10 +12,6 @@ p {
 	transform-origin: left;
 	transform-style: preserve-3d;
 	border-left: 2px solid black;
-
-	// & .page_corner:hover {
-	// 	transform: rotateY(.1turn);
-	// }
 }
 .page1 {
 	z-index: 2;
@@ -41,19 +37,16 @@ p {
 }
 .page_corner {
 	position: inherit;
-	width: 100px;
-	height: 100px;
-	background-color: red;
+	width: 55px;
+	height: 55px;
 	cursor: pointer;
 }
 .front_corner_top {
 	right: 0;
 	bottom: 0;
-	background-color: blue;
 }
 .front_corner_bottom {
 	right: 0;
-	background-color: blue;
 }
 .back_corner_bottom {
 	bottom: 0;
