@@ -7,7 +7,7 @@
 }
 
 [data-book='open'] {
-	transform: translateX(280px);
+	transform: translateX(15em);
 	transition: transform 0.7s ease-in-out both;
 }
 [data-book='closed'] {
